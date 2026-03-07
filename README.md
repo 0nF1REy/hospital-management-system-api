@@ -1,4 +1,6 @@
-# Hospital Management System (HMS)
+<p align="center">
+    <img src="./resources/images/docs/logotype/hms.svg" width="300" alt="Logotipo — Hospital Management System (HMS)" />
+</p>
 
 <div align="center">
 
@@ -8,13 +10,9 @@
 
 </div>
 
-Sistema backend para gerenciamento hospitalar composto por dois servicos Spring Boot:
-
-- `api`: servico principal com CRUD de pacientes, medicos, consultas e cobrancas.
-- `hospital_notification_service`: servico auxiliar que recebe notificacoes via webhook quando uma consulta e criada.
-
 ## 🧭 Guia de Navegação (Índice)
 
+- **[📖 Descrição](#descricao)**
 - **[🏥 Visão Geral](#visao-geral)**
 - **[🧱 Arquitetura do Repositório](#arquitetura-do-repositorio)**
 - **[🛠️ Tecnologias e Dependências](#tecnologias-e-dependencias)**
@@ -29,6 +27,15 @@ Sistema backend para gerenciamento hospitalar composto por dois servicos Spring 
 - **[📈 Observabilidade e Logs](#observabilidade-e-logs)**
 - **[👤 Sobre o Desenvolvedor](#sobre-o-desenvolvedor)**
 - **[📜 Licença](#licenca)**
+
+## Hospital Management System (HMS) - API
+
+## 📖 Descrição <a name="descricao"></a>
+
+Sistema backend para gerenciamento hospitalar composto por dois servicos Spring Boot:
+
+- `api`: servico principal com CRUD de pacientes, medicos, consultas e cobrancas.
+- `hospital_notification_service`: servico auxiliar que recebe notificacoes via webhook quando uma consulta e criada.
 
 ## 🏥 Visão Geral <a name="visao-geral"></a>
 
