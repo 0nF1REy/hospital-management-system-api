@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="./resources/images/docs/logotype/hms.svg" width="300" alt="Logotipo — Hospital Management System (HMS)" />
+    <img src="./docs/images/logotype/hms.svg" width="300" alt="Logotipo — Hospital Management System (HMS)" />
 </p>
 
 <div align="center">
@@ -315,7 +315,7 @@ Exemplos uteis:
     <td align="center">
         <br>
         <a href="https://github.com/0nF1REy" target="_blank">
-          <img src="./resources/images/docs/developer/alan-ryan.jpg" height="160" alt="Foto - Alan Ryan">
+          <img src="./docs/images/developer/alan-ryan.jpg" height="160" alt="Foto - Alan Ryan">
         </a>
         </p>
         <a href="https://github.com/0nF1REy" target="_blank">
