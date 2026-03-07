@@ -8,7 +8,9 @@ import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestClient;
 
 import java.util.Optional;
 
@@ -18,6 +20,7 @@ public class AppointmentService {
 
     private static final Logger logger = LoggerFactory.getLogger(AppointmentService.class);
     private final AppointmentRepository appointmentRepository;
+    private final RestClient restClient = RestClient.create();
 
     public Page<Appointment> getAllAppointments(int page, int size) {
         try {
@@ -40,10 +43,29 @@ public class AppointmentService {
 
     public Appointment createAppointment(Appointment appointment) {
         try {
-            return appointmentRepository.save(appointment);
+            Appointment savedAppointment = appointmentRepository.save(appointment);
+
+            sendWebhook(savedAppointment);
+
+            return savedAppointment;
         } catch (Exception e) {
             logger.error("Erro ao criar consulta: {}", e.getMessage());
             return null;
+        }
+    }
+
+    private void sendWebhook(Appointment appointment) {
+        String webhookUrl = "http://localhost:8081/api/v1/webhook";
+        try {
+            restClient.post()
+                    .uri(webhookUrl)
+                    .contentType(MediaType.APPLICATION_JSON)
+                    .body(appointment)
+                    .retrieve()
+                    .toBodilessEntity();
+            logger.info("Webhook enviado com sucesso para a consulta ID: {}", appointment.getId());
+        } catch (Exception e) {
+            logger.error("Falha ao enviar webhook: {}", e.getMessage());
         }
     }
 

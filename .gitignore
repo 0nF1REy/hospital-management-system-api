@@ -62,3 +62,15 @@ nbdist/
 # ================================
 Thumbs.db
 Desktop.ini
+
+# ================================
+# Java & Gradle
+# ================================
+.gradle/
+**/build/
+**/bin/
+**/*.class
+**/generated/
+
+# Wrapper do Gradle
+!gradle-wrapper.jar
