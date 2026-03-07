@@ -25,6 +25,7 @@ Sistema backend para gerenciamento hospitalar composto por dois servicos Spring 
 - **[🔗 Endpoints da API Principal](#endpoints-da-api-principal)**
 - **[🔔 Endpoint do Serviço de Notificações](#endpoint-do-servico-de-notificacoes)**
 - **[🔄 Fluxo de Webhook Entre Serviços](#fluxo-de-webhook-entre-servicos)**
+- **[🗺️ Diagramas](#diagramas)**
 - **[📈 Observabilidade e Logs](#observabilidade-e-logs)**
 - **[👤 Sobre o Desenvolvedor](#sobre-o-desenvolvedor)**
 - **[📜 Licença](#licenca)**
@@ -254,6 +255,35 @@ Implementacao atual no `AppointmentService`:
 Implicacao pratica:
 
 - A persistencia da consulta e desacoplada da confirmacao de recebimento do webhook.
+
+## 🗺️ Diagramas <a name="diagramas"></a>
+
+### Arquitetura Geral
+
+```mermaid
+flowchart LR
+  C[Cliente HTTP] -->|REST /api/v1| API[API Principal\n:8080]
+  API -->|JPA| DB[(PostgreSQL)]
+  API -->|POST /api/v1/webhook| NS[Notification Service\n:8081]
+```
+
+### Sequencia: Criacao de Consulta + Webhook
+
+```mermaid
+sequenceDiagram
+  autonumber
+  participant U as Usuario/Cliente
+  participant A as API (:8080)
+  participant D as PostgreSQL
+  participant N as Notification Service (:8081)
+
+  U->>A: POST /api/v1/appointments
+  A->>D: Salva Appointment
+  D-->>A: Appointment persistido
+  A->>N: POST /api/v1/webhook (payload)
+  N-->>A: 200 OK (ou falha logada)
+  A-->>U: Resposta da criacao da consulta
+```
 
 ## 📈 Observabilidade e Logs <a name="observabilidade-e-logs"></a>
 
