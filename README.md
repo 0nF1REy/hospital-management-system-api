@@ -16,6 +16,7 @@
 - **[🏥 Visão Geral](#visao-geral)**
 - **[🧱 Arquitetura do Repositório](#arquitetura-do-repositorio)**
 - **[🛠️ Tecnologias e Dependências](#tecnologias-e-dependencias)**
+- **[📘 Guia de Primeiros Passos](#guia-de-primeiros-passos)**
 - **[📁 Estrutura de Pastas](#estrutura-de-pastas)**
 - **[⚙️ Pré-requisitos](#pre-requisitos)**
 - **[🔐 Variáveis de Ambiente](#variaveis-de-ambiente)**
@@ -75,6 +76,12 @@ Fluxo resumido:
 - Spring Actuator (`api`).
 - Log4j2 (`api`, substituindo starter de logging padrao).
 - Dotenv (`api`) via `springboot4-dotenv`.
+
+## 📘 Guia de Primeiros Passos <a name="guia-de-primeiros-passos"></a>
+
+Para onboarding rapido e links de referencia do ecossistema Spring/Gradle, consulte:
+
+- [docs/guides/HELP.md](docs/guides/HELP.md)
 
 ## 📁 Estrutura de Pastas <a name="estrutura-de-pastas"></a>
 

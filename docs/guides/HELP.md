@@ -1,6 +1,8 @@
-# Primeiros Passos
+# 🚀 Primeiros Passos
 
-### Documentação de Referência
+> [⬅️ Voltar para o README principal](../../README.md)
+
+### 📚 Documentação de Referência
 
 Para se aprofundar, consulte as seções a seguir:
 
@@ -12,7 +14,7 @@ Para se aprofundar, consulte as seções a seguir:
 - [Spring Data JPA](https://docs.spring.io/spring-boot/4.0.3/reference/data/sql.html#data.sql.jpa-and-spring-data)
 - [Spring Configuration Processor](https://docs.spring.io/spring-boot/4.0.3/specification/configuration-metadata/annotation-processor.html)
 
-### Guias
+### 🧭 Guias
 
 Os guias a seguir mostram, na prática, como usar alguns recursos:
 
@@ -21,7 +23,7 @@ Os guias a seguir mostram, na prática, como usar alguns recursos:
 - [Construindo serviços REST com Spring](https://spring.io/guides/tutorials/rest/)
 - [Acessando dados com JPA](https://spring.io/guides/gs/accessing-data-jpa/)
 
-### Links Adicionais
+### 🔗 Links Adicionais
 
 As referências extras abaixo também podem ajudar:
 
