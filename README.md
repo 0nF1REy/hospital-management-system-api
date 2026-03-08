@@ -21,6 +21,7 @@
 - **[⚙️ Pré-requisitos](#pre-requisitos)**
 - **[🔐 Variáveis de Ambiente](#variaveis-de-ambiente)**
 - **[▶️ Como Executar](#como-executar)**
+- **[📑 Documentação Interativa (Swagger)](#swagger)**
 - **[🔗 Endpoints da API Principal](#endpoints-da-api-principal)**
 - **[🔔 Endpoint do Serviço de Notificações](#endpoint-do-servico-de-notificacoes)**
 - **[🔄 Fluxo de Webhook Entre Serviços](#fluxo-de-webhook-entre-servicos)**
@@ -156,6 +157,17 @@ URLs base:
 
 - API principal: `http://localhost:8080/api/v1`
 - Servico de notificacoes: `http://localhost:8081/api/v1`
+
+## 📑 Documentação Interativa (Swagger) <a name="swagger"></a>
+
+O projeto utiliza **SpringDoc OpenAPI** para gerar automaticamente a documentação técnica seguindo o padrão OpenAPI 3. Com os serviços em execução, você pode visualizar e testar todos os endpoints diretamente pelo navegador.
+
+A documentação está organizada logicamente (Pacientes -> Médicos -> Consultas -> Financeiro) e inclui exemplos de payloads e códigos de resposta HTTP.
+
+### Links de Acesso
+
+- **API Principal (HMS):** [http://localhost:8080/api/v1/docs](http://localhost:8080/api/v1/docs)
+- **Serviço de Notificações:** [http://localhost:8081/api/v1/docs](http://localhost:8081/api/v1/docs)
 
 ## 🔗 Endpoints da API Principal <a name="endpoints-da-api-principal"></a>
 
