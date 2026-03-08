@@ -5,7 +5,7 @@ plugins {
 }
 
 group = 'dev.alanryan.hospitalmanagementsystem'
-version = '0.2.0'
+version = '0.3.0'
 description = 'Hospital Management System - Project with Spring Boot'
 
 java {
@@ -43,6 +43,7 @@ dependencies {
 	developmentOnly("me.paulschwarz:springboot4-dotenv")
 	implementation 'org.springframework.boot:spring-boot-starter-log4j2'
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:3.0.2'
 }
 
 tasks.named('test') {
